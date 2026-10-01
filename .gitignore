@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Cloned backend repositories
+facility-resource-service/
+university-reservation-service/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
