@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: group06-frontend
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_FACILITY_SERVICE_URL
+        sync: false
+      - key: VITE_RESERVATION_SERVICE_URL
+        sync: false

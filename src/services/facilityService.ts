@@ -1,7 +1,7 @@
 import { Facility, CreateFacilityInput, UpdateFacilityInput, FacilityFilterParams, FacilityStatus } from '../types/facility';
 import { getStoredFacilities, saveFacilities } from './storage';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+const API_BASE_URL = import.meta.env.VITE_FACILITY_SERVICE_URL || import.meta.env.VITE_API_BASE_URL || '';
 
 // Delay simulation for realistic async UI states
 const simulateDelay = (ms = 250) => new Promise((resolve) => setTimeout(resolve, ms));

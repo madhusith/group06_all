@@ -1,7 +1,7 @@
 import { Resource, CreateResourceInput, UpdateResourceInput, ResourceFilterParams, ResourceStatus } from '../types/resource';
 import { getStoredResources, saveResources, getStoredFacilities, saveFacilities } from './storage';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+const API_BASE_URL = import.meta.env.VITE_FACILITY_SERVICE_URL || import.meta.env.VITE_API_BASE_URL || '';
 const simulateDelay = (ms = 250) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const resourceService = {
